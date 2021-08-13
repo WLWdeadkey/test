@@ -1,0 +1,20 @@
+server:
+  #配置服务器启动端口
+  port: 8443
+  #配置访问的上下文路径，就是localhost:8083后面需要的上下文路径
+  #已废弃  context-path: /helloworld
+#  servlet:
+#    context-path: /helloworld
+
+spring:
+  servlet:
+    multipart:
+      enabled: true #开启文件上传
+      max-file-size: 500MB
+      max-request-size: 500MB
+
+minio:
+  endpoint: http://localhost:9000 #Minio服务所在地址
+  bucketName: test #存储桶名称
+  accessKey: minioadmin #访问的key
+  secretKey: minioadmin #访问的秘钥
